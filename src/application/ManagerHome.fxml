@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ManagerHomeController">
+   <top>
+      <MenuBar style="-fx-base: #BE8014;" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Signed as a manager" />
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <SplitPane dividerPositions="0.29797979797979796" layoutX="-2.0" layoutY="16.0" prefHeight="807.0" prefWidth="1286.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minWidth="400.0" prefHeight="160.0" prefWidth="400.0" style="-fx-background-color: #F9E8CB;">
+                     <children>
+                        <Label layoutX="19.0" layoutY="23.0" text="ADMIN PANEL" />
+                        <Separator layoutX="15.0" layoutY="40.0" prefWidth="350.0" />
+                        <Button fx:id="btnMenu" layoutX="16.0" layoutY="60.0" mnemonicParsing="false" onAction="#MenuAction" prefHeight="99.0" prefWidth="349.0" style="-fx-background-radius: 0px; -fx-base: #CCA96D;" text="MENU" />
+                        <Button fx:id="btnOrders" layoutX="15.0" layoutY="208.0" mnemonicParsing="false" onAction="#OrdersAction" prefHeight="99.0" prefWidth="349.0" style="-fx-background-radius: 0px; -fx-base: #CCA96D;" text="ORDERS" />
+                        <Button fx:id="btnEmployees" layoutX="16.0" layoutY="352.0" mnemonicParsing="false" onAction="#EmployeesAction" prefHeight="99.0" prefWidth="349.0" style="-fx-background-radius: 0px; -fx-base: #CCA96D;" text="MANAGE EMPLOYEES" />
+                        <Button fx:id="btnAnalytics" layoutX="15.0" layoutY="501.0" mnemonicParsing="false" onAction="#AnalyticsAction" prefHeight="99.0" prefWidth="349.0" style="-fx-background-radius: 0px; -fx-base: #CCA96D;" text="ANALYTICS" />
+                        <Button fx:id="btnLogOut" layoutX="148.0" layoutY="2.0" mnemonicParsing="false" onAction="#LogoutAction" style="-fx-base: #F9E8CB; -fx-background-radius: 50;" text="Log Out" />
+                     </children></AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #F9F0E2;">
+                     <children>
+                        <Label layoutX="18.0" layoutY="23.0" text="HIGHLIGHTS" />
+                        <Separator layoutX="18.0" layoutY="40.0" prefWidth="800.0" />
+                        <Separator layoutX="235.0" layoutY="52.0" prefHeight="5.0" prefWidth="36.0" />
+                        <Separator layoutX="112.0" layoutY="53.0" orientation="VERTICAL" prefHeight="96.0" prefWidth="2.0" />
+                        <Separator layoutX="114.0" layoutY="147.0" prefHeight="4.0" prefWidth="159.0" />
+                        <Separator layoutX="270.0" layoutY="53.0" orientation="VERTICAL" prefHeight="96.0" prefWidth="2.0" />
+                        <Separator layoutX="114.0" layoutY="52.0" prefHeight="5.0" prefWidth="20.0" />
+                        <Label layoutX="136.0" layoutY="45.0" text="Most popular dish" />
+                        <Separator layoutX="471.0" layoutY="52.0" prefHeight="5.0" prefWidth="29.0" />
+                        <Separator layoutX="341.0" layoutY="53.0" orientation="VERTICAL" prefHeight="96.0" prefWidth="2.0" />
+                        <Separator layoutX="343.0" layoutY="147.0" prefHeight="4.0" prefWidth="159.0" />
+                        <Separator layoutX="499.0" layoutY="53.0" orientation="VERTICAL" prefHeight="96.0" prefWidth="2.0" />
+                        <Separator layoutX="343.0" layoutY="52.0" prefHeight="5.0" prefWidth="20.0" />
+                        <Label layoutX="365.0" layoutY="45.0" text="Earnings this month" />
+                        <Separator layoutX="694.0" layoutY="53.0" prefHeight="5.0" prefWidth="29.0" />
+                        <Separator layoutX="564.0" layoutY="54.0" orientation="VERTICAL" prefHeight="96.0" prefWidth="2.0" />
+                        <Separator layoutX="566.0" layoutY="148.0" prefHeight="4.0" prefWidth="159.0" />
+                        <Separator layoutX="722.0" layoutY="54.0" orientation="VERTICAL" prefHeight="96.0" prefWidth="2.0" />
+                        <Separator layoutX="566.0" layoutY="53.0" prefHeight="5.0" prefWidth="20.0" />
+                        <Label layoutX="588.0" layoutY="46.0" text="Overall orders served" />
+                        <Label fx:id="Hdish" alignment="CENTER" contentDisplay="CENTER" layoutX="118.0" layoutY="64.0" prefHeight="81.0" prefWidth="152.0" text="NAME" textFill="#2600ff">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Hday" alignment="CENTER" contentDisplay="CENTER" layoutX="344.0" layoutY="65.0" prefHeight="81.0" prefWidth="156.0" text="NUMBER" textFill="#ff6d00">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="29.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Hnum" alignment="CENTER" contentDisplay="CENTER" layoutX="566.0" layoutY="63.0" prefHeight="88.0" prefWidth="157.0" text="NUMBER" textFill="#23a300">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="29.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="25.0" layoutY="152.0" prefHeight="44.0" prefWidth="802.0" />
+                        <Label layoutX="25.0" layoutY="155.0" text="FLOORPLAN" />
+                        <AnchorPane layoutX="25.0" layoutY="195.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="338.0" prefWidth="804.0" style="-fx-background-color: white; -fx-border-color: black;">
+                           <children>
+                              <ImageView fitHeight="383.0" fitWidth="459.0" layoutX="158.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/floor.png" />
+                                 </image></ImageView>
+                              <Button fx:id="btnTable1" layoutX="236.0" layoutY="103.0" mnemonicParsing="false" onAction="#getName" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 50;" text="1" />
+                              <Button fx:id="btnTable2" layoutX="318.0" layoutY="64.0" mnemonicParsing="false" onAction="#getName" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 50;" text="2" />
+                              <Button fx:id="btnTable3" layoutX="398.0" layoutY="60.0" mnemonicParsing="false" onAction="#getName" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 50;" text="3" />
+                              <Button fx:id="btnTable4" layoutX="318.0" layoutY="146.0" mnemonicParsing="false" onAction="#getName" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 50;" text="4" />
+                              <Button fx:id="btnTable5" layoutX="479.0" layoutY="84.0" mnemonicParsing="false" onAction="#getName" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 50;" text="5" />
+                              <Button fx:id="btnTable6" layoutX="419.0" layoutY="148.0" mnemonicParsing="false" onAction="#getName" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 50;" text="6" />
+                              <ImageView fx:id="updateButton" fitHeight="50.0" fitWidth="52.0" layoutX="8.0" layoutY="6.0" onMousePressed="#DefaultSize" onMouseReleased="#Update" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/refresh.png" />
+                                 </image></ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

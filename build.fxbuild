@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<anasks:AnTask xmi:version="2.0" xmlns:xmi="hp://www.omg.org/XMI" xmlns:anasks="hp://org.eclipse.fx.ide.jd/1.0" buildDirecory="${projec}/build">
+  <deploy>
+    <applicaion name="GC01_Coursework"/>
+    <info/>
+  </deploy>
+  <signjar/>
+</anasks:AnTask>
